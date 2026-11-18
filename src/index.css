@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: ghostwhite;
+  color: black;
+}
+
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .75rem 1.25rem;
+  background-color: ghostwhite;
+  box-shadow: 0px 2px 2px lightgray;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+
+nav ul li {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav ul li:hover {
+  color: darkgray;
+}
+
+#Home {
+  height: 100vh;
+  width: 100vw;
+  
+}
+
+
+
+
+#heroSection {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#BGVideo
+{
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+#content {
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#content h1
+{
+  font-size: 55px;
+  margin-bottom: 1rem;
+}
+#content h3
+{
+  font-size: 35px;
+  margin-bottom: .75rem;
+}
+#content p
+{
+  font-size: 18px;
+  margin-bottom: 1.25rem;
+  color: lightgray;
+}
+
+#content button
+{
+  padding: .75rem 1.25rem;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+#content button:hover
+{
+  background-color: rgb(61, 60, 60);
+}
+
+
+
+/* ============================= */
+/* ADMIN SECTION */
+/* ============================= */
+
+#Admin {
+    min-height: 100vh;
+    width: 100%;
+    padding: 40px 5%;
+    background-color: #f8f9ff;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* ============================= */
+/* FORM SECTION */
+/* ============================= */
+
+#formSection {
+    width: 100%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(50, 61, 238, 0.08);
+    border: 1px solid #eeeeff;
+}
+
+#formSection form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+#formSection form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#formSection p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* INPUTS */
+
+#formSection input[type="text"],
+#formSection input[type="number"],
+#formSection select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #e0e0eb;
+    border-radius: 8px;
+    background-color: #fafaff;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+#formSection input:focus,
+#formSection select:focus {
+    border-color: #323DEE;
+    box-shadow: 0 0 0 3px rgba(50, 61, 238, 0.1);
+    background-color: white;
+}
+
+/* GENDER */
+
+#formSection div:has(input[type="radio"]) div {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+#formSection input[type="radio"] {
+    accent-color: #323DEE;
+    cursor: pointer;
+    width: fit-content;
+}
+
+#formSection label {
+    font-size: 14px;
+    color: #555;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* ADD EMPLOYEE BUTTON */
+
+#formSection button {
+    grid-column: 1 / -1;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #323DEE, #B16BDC);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#formSection button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(50, 61, 238, 0.25);
+}
+
+/* ============================= */
+/* TABLE SECTION */
+/* ============================= */
+
+#tableSection {
+    width: 100%;
+    overflow-x: auto;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(50, 61, 238, 0.08);
+    border: 1px solid #eeeeff;
+}
+
+/* TABLE */
+
+#tableSection table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+/* TABLE HEADER */
+
+#tableSection thead {
+    background-color: #f4f4ff;
+}
+
+#tableSection th {
+    padding: 16px 20px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    color: #323DEE;
+    border-bottom: 1px solid #eeeeff;
+}
+
+/* TABLE DATA */
+
+#tableSection td {
+    padding: 16px 20px;
+    font-size: 14px;
+    color: #444;
+    border-bottom: 1px solid #f0f0f5;
+}
+
+/* TABLE ROW HOVER */
+
+#tableSection tbody tr {
+    transition: 0.2s ease;
+}
+
+#tableSection tbody tr:hover {
+    background-color: #f8f8ff;
+}
+
+/* LAST ROW */
+
+#tableSection tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 900px) {
+
+    #formSection form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    #Admin {
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    #formSection {
+        padding: 20px;
+    }
+
+    #formSection form {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #formSection button {
+        grid-column: auto;
+    }
+
+}
